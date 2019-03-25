@@ -1,0 +1,27 @@
+{
+  "name": "browser-technologies-1819",
+  "version": "1.0.0",
+  "description": "- Geen afbeeldingen\r   - Achtergronden verdwijnen, logo toont netjes een alternatief qua tekst\r - Snelheid\r   - Niet getest\r - Geen muis\r   - Er valt door de app heen te tabben, maar niet elk element dat tab-baar is hoort dat te zijn\r   - En focus-states zijn niet goed\r - Zonder javascript werkt de app beperkt\r   - Alleen zoeken kan via de server zodra ik dat heb geïmplementeerd.\r - LocalStorage kan vervangen worden door een andere store\r - Fonts worden gefallbackt",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maanlamp/browser-technologies-1819.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maanlamp/browser-technologies-1819/issues"
+  },
+  "homepage": "https://github.com/maanlamp/browser-technologies-1819#readme"
+}

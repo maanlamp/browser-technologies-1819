@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="index.css">
+	<script src="index.js" type="module"></script>
+	<% if ((ingredients||[]).length) { %>
+		<style>
+			<% for (const i in ingredients) { %>
+				<%=i%>
+			<% } %>
+		</style>
+	<% } %>
+	<title>Tosto</title>
+</head>
+<body>
+	<header>Maak je tosti</header>
+	<main>
+		<form method="POST" action="/add">
+			<button type="submit" name="ingredient" value="sla-ijsberg">IJsbergsla</button>
+			<button type="submit" name="ingredient" value="sla-romaine">Romainesla</button>
+			<button type="submit" name="ingredient" value="saus-mayonaise">Mayonaise</button>
+			<button type="submit" name="ingredient" value="saus-ketchup">Ketchup</button>
+			<button type="submit" name="ingredient" value="saus-mosterd">Mosterd</button>
+			<button type="submit" name="ingredient" value="brood-wit">Wit brood</button>
+			<button type="submit" name="ingredient" value="brood-zwart">Zwart brood</button>
+		</form>
+	</main>
+	<footer>
+		<% (ingredients||[]).forEach(ingredient => { %>
+			<%- include(`../static/images/${ingredient}.svg`); %>
+		<% }); %>
+	</footer>
+</body>
+</html>
