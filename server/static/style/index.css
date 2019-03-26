@@ -69,6 +69,7 @@ footer {
 	pointer-events: none;
 	left: -6rem;
 	bottom: -6rem;
+	animation: add 1s ease;
 } footer>#buttons {
 	position: absolute;
 	right: 1rem;
@@ -91,4 +92,14 @@ footer {
 	background-color: rgb(255, 45, 80);
 } footer>#buttons>#done {
 	background-color: rgb(39, 128, 211);
+}
+
+@keyframes add {
+	from {
+		opacity: 0;
+		margin-bottom: 150px;
+	} to {
+		opacity: 1;
+		margin-bottom: 0;
+	}
 }
