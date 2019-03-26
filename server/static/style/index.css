@@ -58,8 +58,11 @@ main>form {
 	font-size: 2rem;
 }
 
-footer>#ingredients {
+footer {
+	perspective: 8cm;
+} footer>#ingredients {
 	position: absolute;
+	transform: rotateX(20deg);
 } footer>#ingredients>svg {
 	width: 200px;
 	position: absolute;
