@@ -57,9 +57,9 @@ void function addIngredientClientside () {
 			if (!sessionStorage.hasOwnProperty(key)) break
 			queue.then(() => fetch(`/ingredient/${value}`)
 				.then(response => response.text())
-				.then(txt => addToSandwich(txt, value))
-				.catch(console.error));
+				.then(txt => addToSandwich(txt, value)));
 		}
+		queue.catch(console.error);
 	}();
 }();
 
