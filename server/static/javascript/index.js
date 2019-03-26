@@ -54,12 +54,11 @@ void function addIngredientClientside () {
 		clearTosto();
 		for (const key in sessionStorage) {
 			const value = sessionStorage.getItem(key);
-			if (sessionStorage.hasOwnProperty(key)) {
-				queue.then(() => fetch(`/ingredient/${value}`)
-					.then(response => response.text())
-					.then(txt => addToSandwich(txt, value))
-					.catch(console.error));
-			}
+			if (!sessionStorage.hasOwnProperty(key)) break
+			queue.then(() => fetch(`/ingredient/${value}`)
+				.then(response => response.text())
+				.then(txt => addToSandwich(txt, value))
+				.catch(console.error));
 		}
 	}();
 }();
