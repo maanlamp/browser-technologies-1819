@@ -4,8 +4,13 @@ const sessionStorage = window.sessionStorage || {
 	cache: new Map(),
 	setItem: function (k, v) {return this.cache.set(k, v)},
 	getItem: function () {return this.cache.get(k)},
-	clear: function () {return this.cache.clear()},
-	forEach: function (cb) {return this.cache.forEach(cb)}
+	clear: function () {return this.cache.clear()}
+}
+
+function clearTosto () {
+	fetch("/clear");
+	Array.from(select("#ingredients").children)
+		.forEach(child => child.remove());
 }
 
 void function addIngredientClientside () {
@@ -24,12 +29,13 @@ void function addIngredientClientside () {
 
 		svg.style = `
 			transform:
-				translateY(-${(count + 1) * 10}px)
+				translateY(-${(count + 1) * 15}px)
 				rotate(${Math.floor(Math.random() * 90) - 45}deg);
 			transform-origin: center center;
 		`.trim();
 		ingredients.appendChild(svg);
-		if (type) sessionStorage.setItem(`ingredient${count + 1}`, type);
+		if (type) sessionStorage
+			.setItem(`ingredient${count + 1}`, type);
 	}
 
 	Array.from(select("form").children)
@@ -45,8 +51,7 @@ void function addIngredientClientside () {
 	void function syncIngredientsOnPageload () {
 		const queue = Promise.resolve();
 
-		Array.from(select("#ingredients").children)
-			.forEach(child => child.remove());
+		clearTosto();
 		for (const key in sessionStorage) {
 			const value = sessionStorage.getItem(key);
 			if (sessionStorage.hasOwnProperty(key)) {
@@ -65,7 +70,6 @@ void function syncTostoClientside () {
 	clear.addEventListener("click", event => {
 		event.preventDefault();
 		sessionStorage.clear();
-		Array.from(select("#ingredients").children)
-			.forEach(child => child.remove());
+		clearTosto();
 	});
 }();

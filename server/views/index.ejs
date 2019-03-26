@@ -12,7 +12,7 @@
 			<% for (const i in ingredients) { %>
 				<%= `svg:nth-of-type(${Number(i) + 1}) {
 					transform:
-						translateY(-${(Number(i) + 1) * 10}px)
+						translateY(-${(Number(i) + 1) * 15}px)
 						rotate(${Math.floor(Math.random() * 90) - 45}deg);
 				}` %>
 			<% } %>

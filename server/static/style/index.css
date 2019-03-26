@@ -28,7 +28,7 @@ header, footer {
 	top: 0;
 	background: url(../images/header.png) no-repeat center center;
 	background-size: cover;
-	height: 180px;
+	height: 200px;
 	font-family: "Leckerli One", cursive;
 	font-size: 7rem;
 	color: rgb(39, 128, 211);
@@ -59,7 +59,7 @@ main>form {
 }
 
 footer {
-	perspective: 8cm;
+	perspective: 15cm;
 } footer>#ingredients {
 	position: absolute;
 	transform: rotateX(20deg);
@@ -68,9 +68,12 @@ footer {
 	position: absolute;
 	pointer-events: none;
 	left: -6rem;
-	bottom: -6rem;
-	animation: add 1s ease;
-} footer>#buttons {
+	bottom: -11rem;
+} footer>#ingredients>svg:last-of-type {
+	animation: add .5s ease;
+}
+
+footer>#buttons {
 	position: absolute;
 	right: 1rem;
 	bottom: 1rem;
