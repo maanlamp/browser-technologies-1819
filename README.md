@@ -1,11 +1,16 @@
 # Browser Technologies @cmda-minor-web 1819
 ## Wireflow
-![Wireflow van de tostiplicatie](wireflow.png)
+![Wireflow van de tostiplicatie](./wireflow.png)
 Ik hev de app zo gemaakt dat je alleen een werkende "HTML5 browser" nodig hebt.
 
 Met CSS wordt de app mooi gestyleerd. Hierbij heb ik rekening gehouden met de ondersteuning van features m.b.v. [caniuse.com](caniuse.com).
 
 Om de app wat lekkerder en sneller te laten werken, heb ik javascript ingezet om de oorspronkelijke werking tegen te houden, en alle request via javascript af te werken. Zo voorkom je bijvoorbeeld een page-reload per toegevoegd ingrediënt. Mocht de browser geen javascript onderstaunen, zal de app dus gebwoon naar behoren werken.
+
+## Live demo
+![Geanimeerd GIF-plaatje dat het gebruik van de demo illustreert](./demo.gif)
+
+[Bekijk hier de live demo]()
 
 ## Beschrijving van de Browser Technologies
 ### Promises
