@@ -33,6 +33,7 @@ app
 		fs.readFile(`${__dirname}/static/images/${type}.svg`, (err, data) => {
 			if (err) res.end(`<?xml version="1.0" encoding="utf-8"?><error>${error}</error>`);
 			res.end(data)})})
-	.post("/done", (req, res) => res.end("Toegevoegd aan je winkelmandje!"))
+	.post("/done", (req, res) => {
+		res.end("Toegevoegd aan je winkelmandje!")})
 	.listen(PORT, () => {
 		console.log(`Listening on ${PORT}`)});
