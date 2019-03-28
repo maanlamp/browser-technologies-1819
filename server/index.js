@@ -34,4 +34,4 @@ app
 			res.end(data)})})
 	.post("/done", (req, res) => res.end("Toegevoegd aan je winkelmandje!"))
 	.listen(PORT, () => {
-		console.log(`Yeeting at ${PORT}, boye!`)});
+		console.log(`Listening on ${PORT}`)});
