@@ -13,7 +13,8 @@
     "es-check": "^5.0.0"
   },
   "scripts": {
-    "test": "es-check es3 \"server/static/javascript/*.js\""
+		"test": "es-check es3 \"server/static/javascript/*.js\"",
+		"start": "node server"
   },
   "repository": {
     "type": "git",
