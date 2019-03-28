@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 1337;
 
 app
 	.set("view engine", "ejs")
-	.set("views", "views")
+	.set("views", "server/views")
 	.use(bodyParser)
 	.use(session({
 		secret: "Geheimpie!",
