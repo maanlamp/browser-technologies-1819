@@ -21,13 +21,23 @@ body {
 	height: 100%;
 	background: rgb(223, 214, 240) url(../images/background.png) no-repeat center center;
 	background-size: cover;
+	overflow: hidden;
 }
 
 main {
 	display: inline-block;
 	height: 100vh;
 	width: 100%;
-	padding: 10rem 0;
+	padding: 20vw 0;
+}
+
+@media (max-width: 600px) {
+	main {
+		margin-top: 10rem;
+	}
+	main, form {
+		padding: 0 !important;
+	}
 }
 
 header, footer {
@@ -44,11 +54,11 @@ header, footer {
 	background-size: cover;
 	height: 100px;
 	font-family: "Leckerli One", cursive;
-	font-size: 7rem;
+	font-size: 9vw;
 	color: rgb(39, 128, 211);
 	text-shadow:
-		0 4px rgb(15, 78, 136),
-		0 8px black;
+		0 .05em rgb(15, 78, 136),
+		0 .1em black;
 } footer {
 	bottom: 0;
 	height: 200px;
@@ -78,10 +88,10 @@ footer {
 	position: absolute;
 	transform: rotateX(20deg);
 } footer>#ingredients>svg {
-	width: 200px;
+	width: calc(50px + 10vw);
 	position: absolute;
 	pointer-events: none;
-	left: -10rem;
+	left: calc(-17.5vw / 2);
 	bottom: -19rem;
 } footer>#ingredients>svg:last-of-type {
 	animation: add .5s ease;
@@ -95,7 +105,7 @@ footer>#buttons {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
-	width: 30rem;
+	width: 25vw;
 } footer>#buttons>a,
 	footer>#buttons>form>button {
 	flex: 1 1 100%;
@@ -103,7 +113,7 @@ footer>#buttons {
 	padding: 1rem 2rem;
 	border-radius: 999rem;
 	color: white;
-	font-size: calc(16px + 2vw);
+	font-size: calc(12px + 2vw);
 	font-family: "Indie Flower", cursive;
 	border: none;
 } footer>#buttons a+form {
