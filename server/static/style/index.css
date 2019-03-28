@@ -10,10 +10,10 @@
 
 button:focus {
 	background: rgb(204, 212, 255);
-	border: 2px solid rgb(137, 137, 255);
+	border: 2px solid lime !important;
 	outline: none;
 } a:focus {
-	border: 2px solid red;
+	border: 2px solid lime !important;
 	outline: none;
 }
 
