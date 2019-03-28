@@ -14,7 +14,7 @@ app
 		cookie: {secure: false}, //set to true op production, vergt https
 		resave: false,
 		saveUninitialized: true}))
-	.use(express.static("static"));
+	.use(express.static("server/static"));
 
 app
 	.get("/", (req, res) => {
