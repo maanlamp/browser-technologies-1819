@@ -10,7 +10,7 @@ app
 	.use(bodyParser)
 	.use(session({
 		secret: "Geheimpie!",
-		cookie: {secure: false}, //set to true op production
+		cookie: {secure: false}, //set to true op production, vergt https
 		resave: false,
 		saveUninitialized: true}))
 	.use(express.static("static"));
