@@ -1,8 +1,3 @@
-if (
-	!("Promise" in window)
-	|| !("fetch" in window)
-) throw new Error("For the best browser experience, your browser must support Promises.");
-
 function select (selector) {
 	if ("querySelector" in document) return document.querySelector(selector);
 	console.warn("Using DOMElementSelector polyfill.");
