@@ -3,7 +3,7 @@ const app = express();
 const bodyParser = require("body-parser").urlencoded({extended: false});
 const session = require("express-session");
 const fs = require("fs");
-const PORT = 1337;
+const PORT = 3000;
 
 app
 	.set("view engine", "ejs")
