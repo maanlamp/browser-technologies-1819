@@ -9,9 +9,11 @@
     "express": "^4.16.4",
     "express-session": "^1.15.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "es-check": "^5.0.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "es-check es3 \"server/static/javascript/*.js\""
   },
   "repository": {
     "type": "git",
