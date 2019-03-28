@@ -10,7 +10,7 @@ Om de app wat lekkerder en sneller te laten werken, heb ik javascript ingezet om
 ## Live demo
 ![Geanimeerd GIF-plaatje dat het gebruik van de demo illustreert](./demo.gif)
 
-[Bekijk hier de live demo]()
+[Bekijk hier de live demo](https://make-a-tost-o.herokuapp.com/)
 
 ## Beschrijving van de Browser Technologies
 ### Promises
