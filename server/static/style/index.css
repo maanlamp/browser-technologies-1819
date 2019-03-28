@@ -80,8 +80,10 @@ footer>#buttons {
 	display: block;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: flex-end;
 	width: 20rem;
-} footer>#buttons>a {
+} footer>#buttons>a,
+	footer>#buttons>form>button {
 	flex: 0 0 100%;
 	text-align: center;
 	padding: 1rem 2rem;
@@ -89,11 +91,12 @@ footer>#buttons {
 	color: white;
 	font-size: 2rem;
 	font-family: "Indie Flower", cursive;
-} footer>#buttons>a+a {
+	border: none;
+} footer>#buttons a+form {
 	margin-top: .5rem;
-} footer>#buttons>#clear {
+} footer>#buttons #clear {
 	background-color: rgb(255, 45, 80);
-} footer>#buttons>#done {
+} footer>#buttons #done {
 	background-color: rgb(39, 128, 211);
 }
 
