@@ -34,6 +34,6 @@ app
 			if (err) res.end(`<?xml version="1.0" encoding="utf-8"?><error>${error}</error>`);
 			res.end(data)})})
 	.post("/done", (req, res) => {
-		res.end("Toegevoegd aan je winkelmandje!")})
+		res.render("done")})
 	.listen(PORT, () => {
 		console.log(`Listening on ${PORT}`)});
